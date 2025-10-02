@@ -1,0 +1,167 @@
+/* Base theme variables */
+:root {
+  --color-bg: #E5E5E5;
+  /* Light background */
+  --color-bg-secondary: #FFFFFF;
+  --color-text: #1C1C1C;
+  /* Primary text */
+  --color-text-secondary: #333333;
+  --color-accent: #1976D2;
+  /* Cyber blue */
+  --color-accent-secondary: #00B8D9;
+  /* Optional cyan accent */
+  --color-nav-bg: var(--color-accent);
+  --color-text-primary: #001B36;
+}
+
+/* Automatically apply dark mode if user's OS prefers it */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #040f18;
+    --color-bg-secondary: #001B36;
+    --color-text: #E5E5E5;
+    --color-text-secondary: #CCCCCC;
+    --color-accent: #1976D2;
+    --color-accent-secondary: #00B8D9;
+    --color-nav-bg: #07141f;
+    --color-text-primary: #1976D2;
+  }
+}
+
+/* Dark theme override */
+[data-theme="dark"] {
+  --color-bg: #040f18;
+  --color-bg-secondary: #001B36;
+  --color-text: #E5E5E5;
+  --color-text-secondary: #CCCCCC;
+  --color-accent: #1976D2;
+  --color-accent-secondary: #00B8D9;
+  --color-nav-bg: #07141f;
+  --color-text-primary: #1976D2;
+}
+
+[data-theme="light"] {
+  --color-bg: #E5E5E5;
+  /* Light background */
+  --color-bg-secondary: #FFFFFF;
+  --color-text: #1C1C1C;
+  /* Primary text */
+  --color-text-secondary: #333333;
+  --color-accent: #1976D2;
+  /* Cyber blue */
+  --color-accent-secondary: #00B8D9;
+  /* Optional cyan accent */
+  --color-nav-bg: var(--color-accent);
+  --color-text-primary: #001B36;
+}
+
+button {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+nav {
+    background: var(--color-nav-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav .nav-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;
+}
+nav .toggle-btn {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--color-text);
+}
+
+header {
+    background: url('your-background.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--color-text-primary);
+    background: var(--color-bg)AA; /* semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.main-content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.sidebar img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 12px; /* rectangle with slightly rounded corners */
+    margin-bottom: 15px;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+}
+
+.social-links a {
+    margin: 0 5px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--highlight);
+}
