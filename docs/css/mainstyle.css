@@ -1,6 +1,6 @@
 :root {
   --primary-bg-color: black;
-  --primary-text-color: rgb(69, 69, 69);
+  --primary-text-color: rgb(90, 90, 90);
   --terminal-text-primary: white;
   --terminal-text-highlight: rgb(78, 31, 245);
   --terminal-text-highlight2: rgb(43, 145, 85);
@@ -11,11 +11,12 @@ nav {
   position: sticky;
   background-color: rgb(32, 32, 32);
   min-height: 30px;
-  border: 1px solid rgb(67, 67, 67);;
+  border: 1px solid rgb(67, 67, 67);
+  padding: 10px;
 }
 
 .nav-links {
-  color: var(--primary-text-color);
+  color: var(--terminal-text-primary);
 }
 
 body {
@@ -29,10 +30,60 @@ h1 {
   color: var(--terminal-text-primary);
 }
 
+a {
+  color:rgb(204, 197, 103);
+}
+
 .terminal-highlight {
   color: var(--terminal-text-highlight);
 }
 
+.terminal-highlight2 {
+  color: var(--terminal-text-highlight2);
+}
+
 .main {
   padding: 20px;
+}
+
+.number-container {
+  display: grid;
+  grid-template-columns: 3% 97%;
+  gap: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(32, 32, 32);
+  min-height: 30px;
+  border: 1px solid rgb(67, 67, 67);
+}
+
+#numbering {
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.blog-item {
+  display: grid;
+  grid-auto-rows: 1fr;
+  row-gap: 1rem;
+  color: var(--terminal-text-primary);
+}
+
+.blog-container {
+  background-color: blue;
+  padding: 10px;
+}
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 481px) {
+
 }
