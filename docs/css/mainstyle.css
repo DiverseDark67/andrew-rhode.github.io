@@ -97,9 +97,17 @@ a.blog-header {
 }
 
 @media (min-width: 320px) {
-
+  .number-container {
+  display: grid;
+  grid-template-columns: 6% 94%;
+  gap: 1rem;
+  }
 }
 
 @media (min-width: 481px) {
-
+  .number-container {
+  display: grid;
+  grid-template-columns: 6% 94%;
+  gap: 1rem;
+  }
 }
