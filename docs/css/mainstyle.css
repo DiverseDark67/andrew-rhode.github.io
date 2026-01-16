@@ -44,6 +44,7 @@ a {
 
 .main {
   padding: 20px;
+  min-height: 90vh;
 }
 
 .number-container {
@@ -76,8 +77,23 @@ footer {
 }
 
 .blog-container {
+  display: grid;
+  grid-template-columns: 10% 5% 85%; /* Title; Year; Description */
+  gap: 1rem;
   background-color: blue;
   padding: 10px;
+}
+
+a.blog-header {
+  font-size: 1.5rem;
+  color: var(--terminal-text-primary);
+  text-decoration: none;
+}
+
+.year {
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
 }
 
 @media (min-width: 320px) {
