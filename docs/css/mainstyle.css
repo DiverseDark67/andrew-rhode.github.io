@@ -1,113 +1,45 @@
+/* Color Palette */
 :root {
-  --primary-bg-color: black;
-  --primary-text-color: rgb(90, 90, 90);
-  --terminal-text-primary: white;
-  --terminal-text-highlight: rgb(78, 31, 245);
-  --terminal-text-highlight2: rgb(43, 145, 85);
+    --bg-light: #FFFFFF;
+    --topo-orange: #d47e2a;
+    --grid-line: rgba(212, 126, 42, 0.15);
 }
 
-nav {
-  color: var(--terminal-text-primary);
-  position: sticky;
-  background-color: rgb(32, 32, 32);
-  min-height: 30px;
-  border: 1px solid rgb(67, 67, 67);
-  padding: 10px;
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: var(--bg-light);
+    color: var(--topo-orange);
+    /* Monospace font gives a technical, map-like readout feel */
+    font-family: 'Courier New', Courier, monospace; 
 }
 
-.nav-links {
-  color: var(--terminal-text-primary);
+.container {
+    position: relative;
+    z-index: 2; /* Brings content above the overlay */
 }
 
-body {
-  background-color: var(--primary-bg-color);
-  font-family: monaco, Consolas, "Lucida Console", monospace;
-  font-size: 1rem;
-  color: var(--primary-text-color);
+/* Custom Utility Classes */
+.text-orange {
+    color: var(--topo-orange) !important;
+}
+
+.border-orange {
+    border-color: var(--topo-orange) !important;
+}
+
+/* Information Box Styling */
+.info-box {
+    border-left: 2px solid var(--topo-orange);
+    border-bottom: 2px solid var(--topo-orange);
 }
 
 h1 {
-  color: var(--terminal-text-primary);
+    letter-spacing: 2px;
 }
 
-a {
-  color:rgb(204, 197, 103);
-}
-
-.terminal-highlight {
-  color: var(--terminal-text-highlight);
-}
-
-.terminal-highlight2 {
-  color: var(--terminal-text-highlight2);
-}
-
-.main {
-  padding: 20px;
-  min-height: 90vh;
-}
-
-.number-container {
-  display: grid;
-  grid-template-columns: 3% 97%;
-  gap: 1rem;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: rgb(32, 32, 32);
-  min-height: 30px;
-  border: 1px solid rgb(67, 67, 67);
-}
-
-#numbering {
-  height: 100vh;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.blog-item {
-  display: grid;
-  grid-auto-rows: 1fr;
-  row-gap: 1rem;
-  color: var(--terminal-text-primary);
-}
-
-.blog-container {
-  display: grid;
-  grid-template-columns: 10% 5% 85%; /* Title; Year; Description */
-  gap: 1rem;
-  background-color: blue;
-  padding: 10px;
-}
-
-a.blog-header {
-  font-size: 1.5rem;
-  color: var(--terminal-text-primary);
-  text-decoration: none;
-}
-
-.year {
-  position: relative;
-  vertical-align: middle;
-  text-align: center;
-}
-
-@media (min-width: 320px) {
-  .number-container {
-  display: grid;
-  grid-template-columns: 6% 94%;
-  gap: 1rem;
-  }
-}
-
-@media (min-width: 481px) {
-  .number-container {
-  display: grid;
-  grid-template-columns: 6% 94%;
-  gap: 1rem;
-  }
+.about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
 }
